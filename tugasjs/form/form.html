@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Tiket Travel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        body{
+            background-color:lightblue;
+        }
+    </style>
+
+        <script>
+            function tiket(){
+                let nama = document.getElementById("namaHelp").value;
+                let areaNama = document.getElementById("hasilNama");
+                    areaNama.innerHTML = nama
+    
+                let email = document.getElementById("emailHelp").value;
+                let areaEmail = document.getElementById("hasilEmail");
+                    areaEmail.innerHTML = email
+    
+                let kota = document.getElementById("kotaHelp").value;
+                let areaKota = document.getElementById("hasilKota");
+                    areaKota.innerHTML = kota
+    
+                let waktu = document.getElementById("jam").value;
+                let areaWaktu = document.getElementById("jamBerangkat");
+                    areaWaktu.innerHTML = waktu
+    
+                let tiket = document.getElementById("tiketHelp").value;
+                let areaTiket = document.getElementById("jumlahTiket");
+                    areaTiket.innerHTML = tiket
+            }
+        </script>
+
+</head>
+<body>
+    <div class="container">
+        <form name="formPendaftaran" action="tugas5.html" method="post">
+            <div class="form-group">
+                <label>Nama Lengkap</label>
+                <input type="text" id="namaHelp" name="nama" placeholder="Nama lengkap" class="form-control" required maxlength="30" minlength="3">
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email"  id="emailHelp" name="nama" placeholder="Email Aktif" class="form-control" required maxlength="30" minlength="9">
+                <small class="form-text text-muted">Email Akan Digunakan Untuk Mengirimkan Notifikasi.</small>
+            </div>
+
+            <div class="form-group">
+                <label>Kota Tujuan</label>
+                <input type="text" id="kotaHelp" name="text" placeholder="Masukkan Kota" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Jam Berangkat</label>
+                <br>
+                <input type="time" id="jam">
+            </div>
+
+            <div class="form-group">
+                <label>Jumlah Tiket</label>
+                <input type="number" id="tiketHelp" name="number" placeholder="Jumlah Tiket" class="form-control" required max="10" min="1">
+                <small class="form-text text-muted" style="color: blue;">Tiket yang akan dipesan</small>
+            </div>
+
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalSaya" onclick="tiket()">
+                Check
+                </button>
+        </form>
+    </div>
+
+    <div class="modal" id="modalSaya" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Rincian Total</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div style="margin: auto;" class="modal-body">
+              <table>
+                  <tbody>
+                      <tr>
+                          <td>Nama Lengkap</td>
+                          <td>:</td>
+                          <td><div id="hasilNama"></div></td>
+                      </tr>
+                      <tr>
+                        <td>Email</td>
+                        <td>:</td>
+                        <td><div id="hasilEmail"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Kota Tujuan</td>
+                        <td>:</td>
+                        <td><div id="hasilKota"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Jam Berangkat</td>
+                        <td>:</td>
+                        <td><div id="jamBerangkat"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Jumlah tiket</td>
+                        <td>:</td>
+                        <td><div id="jumlahTiket"></div></td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success">Bayar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

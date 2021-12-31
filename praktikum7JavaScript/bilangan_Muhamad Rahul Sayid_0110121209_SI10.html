@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan JS menghitung 2 bilangan</title>
+    <script>
+        function menghitung(){
+            let bilangan = document.getElementById("bil1").value;
+            console.log("Angka Bilangan pertama =" + bilangan);
+            let bilanganDua = document.getElementById("bil2").value;
+            console.log("Angka Bilangan kedua =" + bilanganDua);
+            let hasil = Number (bilangan) + Number (bilanganDua);
+            console.log("Hasil Jumlahnya =" + hasil);
+            let total = document.getElementById("total");
+            total.innerHTML = " Hasil Jumlah 2 bilangan diatas adalah = " + hasil;
+
+        }
+    </script>
+</head>
+<body>
+    <h2>Menghitung Jumlah 2 Bilangan</h2>
+    Masukkan Angka Pertama: <input type="number" value="" id="bil1"><br>
+    Masukkan Angka Kedua: <input type="number" value="" id="bil2" ><br>
+   <input type="text" value="" id="hasil" onchange="menghitung()" ><br>
+    <span id="total"></span>
+
+</body>
+</html>

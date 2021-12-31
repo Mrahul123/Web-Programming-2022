@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Flexbox 2</title>
+    <style>
+       *{
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+       }
+       #container{
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+        }
+        nav{
+            background-color: pink;
+            height: 100vh;
+            width: 30%;
+            padding: 10px;
+        }
+        header, footer{
+            background-color: khaki;
+            height: 20vh;
+            width: 100%;
+            padding: 10px;
+        }
+        .konten{
+            display: flex;
+            flex-direction: row;
+            height: 60vh;
+        }
+        article{
+            background-color: white;
+            padding-left: 10px;
+            width: 750px;
+        }
+        aside{
+            background-color: tomato;
+            width: 300px;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav>Nav</nav>
+        <div>
+            <header>Header</header>
+            <div class="konten">
+                <article><h3> Article</h3></article>
+                <aside>Aside</aside>
+            </div>
+            <div>
+            <footer>Footer</footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

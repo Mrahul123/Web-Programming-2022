@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>program Gambar</title>
+</head>
+<body>
+    
+    <select id="binatang" onchange="cetak()" >
+        <option value="gorilla">Gorilla</option>
+        <option value="domba">Domba</option>
+        <option value="kuda">Kuda</option>
+        <option value="kelinci">Kelinci</option>
+        <option value="landak">Landak</option>
+        <option value="banteng">Banteng</option>
+
+
+    </select>
+    
+    <img src="img/" id="gambar" alt="">
+    <script>
+        
+        function cetak() {
+            const hewan = document.getElementById('binatang');
+            const gambar = document.getElementById('gambar');
+
+            if (hewan.value === 'gorilla') {
+                gambar.src = 'img/gorilla.jpg'
+                alert("Ini gambar gorilla.jpg")
+            }
+            if (hewan.value === 'domba') {
+                gambar.src = 'img/domba.jpg'
+                alert("Ini gambar domba.jpg")
+
+            }
+            if (hewan.value === 'kuda') {
+                gambar.src = 'img/kuda.jpg'
+                alert("Ini gambar kuda.jpg")
+
+            }
+            if (hewan.value === 'kelinci') {
+                gambar.src = 'img/kelinci.jpg'
+                alert("Ini gambar kelinci.jpg")
+
+            }
+            if (hewan.value === 'landak') {
+                gambar.src = 'img/landak.jpg'
+                alert("Ini gambar landak.jpg")
+
+            }
+            if (hewan.value === 'banteng') {
+                gambar.src = 'img/banteng.jpg'
+                alert("Ini gambar banteng.jpg")
+
+            }
+        }
+
+        
+    </script>
+    
+</body>
+</html>

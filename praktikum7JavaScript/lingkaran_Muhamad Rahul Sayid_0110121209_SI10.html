@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan JavaScript Lingkaran</title>
+    <script>
+        function lingkaran(){
+            const PHI = 3.14;
+            let _jari = document.getElementById("jari").value;
+            console.log("Jari-Jari :" + _jari);
+            let luas = PHI * _jari * _jari;
+            let kll = 2.0 * PHI * _jari;
+            console.log("Luasnya :" + luas);
+            console.log("Kelilingnya :" + kll );
+            let hasil = document.getElementById("hasil")
+            hasil.innerHTML = "Luasnya :" + luas +"\nKelilingnya :" + kll;
+
+        }
+    </script>
+</head>
+<body>
+    <h3>Menghitung Luas dan Keliling Lingkaran</h3>
+    Masukkan Jari-jari  : <input type="number" value="" id="jari" ><br>
+    <button onclick="lingkaran()">Hitunglah</button>
+    <br>
+    Hasilnya : <span id="hasil"></span>
+</body>
+</html>

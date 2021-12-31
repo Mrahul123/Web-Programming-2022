@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan JS Parkir</title>
+    <script>
+        function biaya(){
+            const HARGA_AWAL = 3000;
+            const HARGA_PERJAM = 1000;
+            let biaya = 0;
+            console.log("Harga Jam pertama :" + HARGA_AWAL);
+            console.log("Harga Jam berikutnya :" + HARGA_PERJAM);
+            let jamMasuk = document.getElementById("jam1").value;
+            let jamKeluar = document.getElementById("jam2").value;
+            let selisih = jamKeluar - jamMasuk;
+            console.log("Jam Masuk :" + jamMasuk);
+            console.log("Jam Keluar :" + jamKeluar);
+
+            if(selisih <=2 ){   
+                biaya = HARGA_AWAL; 
+            }
+            else{
+                let jamTambahan = selisih - 2;
+                biaya = HARGA_AWAL + (HARGA_PERJAM  * jamTambahan );
+            }
+            let areaTotal = document.getElementById("total");
+            areaTotal.innerHTML = "\nBiaya Parkir :" + biaya; 
+            console.log("Total bayar :"+ biaya)
+        }
+        
+    </script>
+</head>
+<body>
+    <h2>Menghitung Biaya Parkir</h2>
+    Jam Masuk Parkir  : <input type="number" value="" id="jam1"><br> 
+    Jam Keluar   : <input type="number" value="" id="jam2"><br>
+    <button onclick="biaya()">Biaya Parkir</button> <span id="total"></span>
+</body>
+</html>

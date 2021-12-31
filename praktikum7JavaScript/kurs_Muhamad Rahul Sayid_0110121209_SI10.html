@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Menghitung Kurs</title>
+    <script>
+        function hitung(){
+            const DOLLAR = 14650;
+            console.log("Nilai 1$   :" + DOLLAR);
+            let rupiah = document.getElementById("kurs").value;
+            console.log("Ingin punya berapa dollar? :" + rupiah);
+            let hasil = DOLLAR * rupiah;
+            console.log("Rupiah yang harus dibayar  :" + hasil);
+            let daerah_hasil = document.getElementById("hasil");
+            daerah_hasil.innerHTML = "Total bayar Anda :" +"Rp." + hasil ;
+
+        }
+    </script>
+</head>
+<body>
+    <h2>Menghitung Kurs</h2>
+    Masukkan Angka Dollar Anda : <input type="number" value="" id="kurs"><br>
+    <button onclick="hitung()">Hitung!</button><br>
+    <span id="hasil"></span>
+</body>
+</html>

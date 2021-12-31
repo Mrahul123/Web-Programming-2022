@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appchat</title>
+    <style>
+        body {
+            width: 70em;
+            min-height: 30em;
+            border: 1px solid black;
+            margin: 2em 10em;
+            box-sizing: border-box;
+            position: relative;
+            
+        }
+        #pesan {
+            position: absolute;
+            bottom: 0;
+            width: 80em;
+        
+        }
+        button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            
+        }
+    </style>
+</head>
+<body>
+    <p id="hasil"></p>
+    <input type="text" id="pesan" placeholder="massage" onchange="kirim()">
+    <button onclick="kirim()">send </button>
+
+    <script>
+        let masukan = document.getElementById("pesan");
+        let keluaran = document.getElementById("hasil");
+        let kotak = "";
+
+        function kirim() {
+            kotak += masukan.value + "<br>";
+            keluaran.innerHTML = kotak;
+            masukan.value = "";
+        }
+
+    </script>
+</body>
+</html>

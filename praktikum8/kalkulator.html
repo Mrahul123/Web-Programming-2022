@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator kurs</title>
+    <script>
+        function hitung(){
+            const DOLLARUS = 9915;
+            const DOLLARSING = 13472;
+            const RINGGIT = 874;
+            const YEN = 120;
+            const EURO = 15888;
+            const RIYAL = 3592;
+            let x = Number (document.getElementById("bil").value);
+            let y = document.getElementById("valas").value;
+            let hasil = parseInt(x) * parseInt(y);
+            DOLLARUS * x ;
+            DOLLARSING * x ;
+            RINGGIT * x ;
+            YEN * x;
+            EURO * x ;
+            RIYAL  * x;
+            if(hasil){
+                document.getElementById("bilrp").value = hasil;
+              
+            }
+        }
+    </script>
+    <style>
+        td{
+            border-style:solid;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Kurs Rupiah - Mata Uang Asing</legend>
+        <table style="background-color: silver;">
+            <tr>
+                <td>Masukan Nilai</td>
+                <td>Valas</td>
+                <td>Nilai Rupiah</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="bil"  onchange="hitung()"></td>
+                <td><select name="valas" id="valas" onchange="hitung()">
+                        <option value="9915">Dollar US</option>
+                        <option value="13472">Dollar Singapure</option>
+                        <option value="874">Ringgit Malaysia</option>
+                        <option value="120">Yen Jepan</option>
+                        <option value="15888">Euro</option>
+                        <option value="3592">Riyal Arab Saudi</option>
+                    </select>
+                </td>
+                <td><input type="text" id="bilrp" ></td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+</html>
